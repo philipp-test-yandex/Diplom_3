@@ -4,7 +4,6 @@ LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти']")
 
 EMAIL_INPUT = (By.NAME, "name")
 PASSWORD_INPUT = (By.NAME, "Пароль")
-# PASSWORD_INPUT = (By.XPATH, "//input[@placeholder='Введите новый пароль']")
 
 PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[text()='Личный Кабинет']/ancestor::a")
 

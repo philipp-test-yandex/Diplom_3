@@ -34,3 +34,6 @@ MODAL_OVERLAY = (By.CLASS_NAME, "Modal_modal_overlay__x2ZCr")
 
 MODAL_TICK_IMAGE = (By.CLASS_NAME, "Modal_modal__image__2nh17")
 
+EMAIL_INPUT = (By.NAME, "name")
+PASSWORD_INPUT = (By.NAME, "Пароль")
+LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти']")

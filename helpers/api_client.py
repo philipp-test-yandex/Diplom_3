@@ -1,5 +1,5 @@
 import requests
-from locators.api_locators import *
+from locators.api_urls import *
 import allure
 
 

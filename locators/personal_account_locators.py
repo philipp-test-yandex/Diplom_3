@@ -7,4 +7,5 @@ ORDER_HISTORY_BUTTON = (By.XPATH, "//a[@href='/account/order-history' and text()
 LOGOUT_BUTTON = (By.XPATH, "//button[contains(text(), 'Выход')]")
 ORDER_NUMBER_IN_HISTORY = (By.CSS_SELECTOR, "p.text.text_type_digits-default")
 
-
+EMAIL_INPUT = (By.NAME, "name")
+PASSWORD_INPUT = (By.NAME, "Пароль")

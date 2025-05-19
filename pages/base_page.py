@@ -22,4 +22,31 @@ class BasePage:
         self.wait.until(EC.url_to_be(expected_url))
 
     def wait_for_element_visible(self, locator):
-        self.wait.until(EC.visibility_of_element_located(locator))
+        return self.wait.until(EC.visibility_of_element_located(locator))
+
+    def wait_for_element_invisible(self, locator):
+        return self.wait.until(EC.invisibility_of_element_located(locator))
+
+    def get_element(self, locator):
+        return self.wait.until(EC.presence_of_element_located(locator))
+
+    def get_element_text(self, locator):
+        return self.wait_for_element_visible(locator).text
+
+    def get_current_url(self):
+        return self.driver.current_url
+
+    def find_elements(self, locator):
+        return self.driver.find_elements(*locator)
+
+    def get_visible_element(self, locator):
+        return self.wait.until(EC.visibility_of_element_located(locator))
+
+    def get_all_elements(self, locator):
+        return self.wait.until(EC.presence_of_all_elements_located(locator))
+
+    def wait_until(self, condition, timeout=10):
+        return WebDriverWait(self.driver, timeout).until(condition)
+
+    def get_element_attribute(self, locator, attribute):
+        return self.get_element(locator).get_attribute(attribute)
