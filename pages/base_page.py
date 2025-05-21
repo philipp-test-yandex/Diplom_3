@@ -50,3 +50,10 @@ class BasePage:
 
     def get_element_attribute(self, locator, attribute):
         return self.get_element(locator).get_attribute(attribute)
+
+    def get_element_text_if_present(self, locator):
+        try:
+            return self.get_element(locator).text.strip()
+        except Exception:
+            return ""
+
